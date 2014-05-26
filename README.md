@@ -3,11 +3,15 @@ Simple REST message board with Spring 4
 
 This is a test REST service application implemented using Spring 4 and Spring WebMVC for a work related assignment.
 
+The technologies were chosen mainly as an opportunity to try new Spring WebMVC features. Note that there is no XML configuration.
+
 The application is in a flat structure of a single maven module. Application layers are divided by the package structure 
 (rest, service, domain, repository). The repository layer is implemented with a synchronized ArrayList. The application layers
 are integrated using interfaces and dependency injection, so the repository implementation could be changed without changes to other layers.
 
-The application exposes REST resources and supports JSON or XML responses for a GET request to /messages.
+The application exposes REST resources and supports JSON or XML responses for a GET request to /messages. New messages 
+can be POSTed to /messages as JSON.
+
 The caller must specify the API version as an Accept header in the request as follows:
 
 - Version 1 JSON: application/vnd.simplemsgboard.v1+json
