@@ -24,6 +24,8 @@ containing title, content and sender.
 Some unit tests are included but more could be added. Integration tests with e.g. embedded jetty and sending requests
 with a java REST client could also be added for completeness.
 
+Error responses could be improved to contain validation error messages. Currently only the HTTP status code indicates an error. No further 
+error details are returned to the caller.
 
 Building and running
 -------------------
